@@ -134,7 +134,7 @@ section{
 @media (max-width: 768px){
     h1{
         width: 95%;
-        font-size: 26px;
+        font-size: 20px;
     }
    
     section{
@@ -142,8 +142,8 @@ section{
         
     }
     .clock{
-    max-width: 300px;
-    height: 50vh;
+    max-width: 400px;
+    height: 45vh;
         margin-top: -10%;
         
     }
