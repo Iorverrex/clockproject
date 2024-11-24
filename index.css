@@ -1,0 +1,149 @@
+body{
+    background-color: wheat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+#clockhead{
+    display: flex;
+   justify-content: center;
+   margin: auto;
+
+   
+ 
+}
+h1{
+    background-color: royalblue;
+    color: black;
+    z-index: 5;
+    color: white;
+    position: fixed;
+    width: 50%;
+    text-align: center;
+    margin-top: 1px;
+    padding: 12px;
+    border-radius: 5px;
+   
+}
+
+section{
+    align-items: center;
+    margin-top: 8%;
+
+}
+.clock{
+    background-image: url("image/1729983939664.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 480px;
+    height: 65vh;
+    border: 5px solid blue;
+    border-radius: 50%;
+    position: relative;
+    font-weight: bold;
+    font-size: 26px;
+    margin: auto;
+    box-shadow: 0 20px 20px black;
+    z-index: 11px;
+    
+    
+}
+.clock .number{
+    --rotation:0;
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    transform: rotate(var(--rotation))
+}
+
+.clock .number1{--rotation: 30deg;}
+.clock .number2{--rotation: 60deg;}
+.clock .number3{--rotation: 90deg;}
+.clock .number4{--rotation: 120deg;}
+.clock .number5{--rotation: 150deg;}
+.clock .number6{--rotation: 180deg;}
+.clock .number7{--rotation: 210deg;}
+.clock .number8{--rotation: 240deg;}
+.clock .number9{--rotation: 270deg;}
+.clock .number10{--rotation: 300deg;}
+.clock .number11{--rotation: 330deg;}
+
+.clock .hand {
+    --rotation:90;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    transform-origin: bottom;
+    z-index: 5;
+    transform: translateX(-50%) rotate( calc(var(--rotation)*1deg));
+}
+
+.clock .hour{
+
+    width: 8px;
+    height: 35%;
+    background-color: black;
+  
+}
+.clock .minute{
+
+    width: 5px;
+    height: 40%;
+    background-color: black;  
+}
+.clock .second{
+
+    width: 2px;
+    height: 47%;
+    background-color: red;
+    border: 2px solid red;
+
+   
+}
+.clock::after{
+    content: " ";
+    position:absolute;
+    background-color:black;
+    z-index: 11;
+    width: 30px;
+    height: 30px;
+    top: 48%;
+    left: 47%;
+    transition: translate(-50%, -50%);
+    border-radius: 50%;
+}
+@media (max-width:1250px){
+    h1{
+        width: 95%;
+        font-size: 28px;
+    }
+   
+    section{
+        margin-top: 20%;
+        
+    }
+    .clock{
+        margin-top: -10%;
+    }
+}
+@media (max-width: 768px){
+    h1{
+        width: 95%;
+        font-size: 26px;
+    }
+   
+    section{
+        margin-top: 30%;
+        
+    }
+    .clock{
+        margin-top: -10%;
+    }
+}
+    
+
